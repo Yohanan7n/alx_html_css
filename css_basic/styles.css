@@ -1,1 +1,23 @@
+/* styles.css */
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; /* Allows main to grow and shrink */
+}
+
+article {
+    flex: 2; /* Takes up 2/3 of the width */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
+
+aside {
+    flex: 1; /* Takes up 1/3 of the width */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
