@@ -1,4 +1,4 @@
-
+Yohan, [6/8/2025 8:58 PM]
 /* General Body and Font Styles */
 body {
     font-family: 'Arial', sans-serif; /* Using Arial as a common fallback */
@@ -171,7 +171,7 @@ header {
     line-height: 1.4;
 }
 
-Yohan, [6/8/2025 8:55 PM]
+Yohan, [6/8/2025 8:58 PM]
 /* Quote Section (main section:nth-of-type(2)) */
 main section:nth-of-type(2) {
     background-color: #33334d; /* Dark blue/purple background */
@@ -326,7 +326,7 @@ main section:nth-of-type(2) p {
     font-weight: bold;
 }
 
-Yohan, [6/8/2025 8:55 PM]
+Yohan, [6/8/2025 8:58 PM]
 .my_section3 > div { /* This targets the direct children divs which are the membership benefit cards */
     display: flex;
     flex-wrap: wrap;
@@ -490,7 +490,7 @@ footer p {
         display: block; /* Stack keywords vertically */
     }
 
-Yohan, [6/8/2025 8:55 PM]
+Yohan, [6/8/2025 8:58 PM]
 .my_section1 > div:last-child > div,
     .my_section2 > div,
     .my_section3 > div,
