@@ -1,0 +1,345 @@
+Yohan, [6/18/2025 9:44 PM]
+/* --- General Body and Base Styles --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /* Default background for the whole site.
+       Will be overridden by specific page classes if needed. */
+    background-color: #f8f8f8; /* Light gray for general background */
+    color: #333; /* Default text color for general content */
+}
+
+/* Define a consistent maximum width for main content areas */
+.main-content-width {
+    max-width: 1100px; /* Adjust this value as needed for your design */
+    margin-left: auto; /* Center the content horizontally */
+    margin-right: auto; /* Center the content horizontally */
+    padding: 0 20px; /* Add horizontal padding to prevent content from touching edges */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* --- Hero Section (for index.html) --- */
+.hero {
+    background-image: url('headphones_hero_1.jpg');
+    background-color: #333; /* Fallback if image fails, darker */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh; /* Make hero take full viewport height */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within hero */
+    overflow: hidden;
+    color: white; /* Default text color for hero content */
+}
+
+/* Hero Overlay for readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    z-index: 0; /* Keep it behind text content */
+}
+
+/* --- Hero Header (for navigation and icon on index.html) --- */
+/* This header should ideally be positioned relative to the viewport if it's sticky */
+/* or relative to the hero if it's meant to stay within the hero's bounds. */
+/* Given its design (top-left logo, top-right nav), it's often fixed/absolute to viewport. */
+.hero-header {
+    position: absolute; /* Position relative to .hero (if .hero is relative) or body */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    z-index: 1; /* Above overlay */
+    /* background: transparent; */ /* Already transparent by default for absolute elements */
+}
+
+/* Icon (Headphones Logo) on Hero Header */
+.icon1 {
+    font-size: 1.2rem; /* Corrected to 'rem', slightly larger */
+    color: blue; /* Or a color visible on hero background */
+    padding: 5px 10px;
+    font-family: 'Spin-Cycle-OT', sans-serif; /* Fallback font */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between image and text */
+    font-weight: bold;
+}
+
+.icon1 img {
+    height: 30px; /* Adjusted icon size */
+    width: auto;
+}
+
+/* Top Right Navigation */
+.top-right-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px; /* More space between links */
+}
+
+.top-right-nav li a {
+    text-decoration: none;
+    color: white; /* Visible on dark hero background */
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.top-right-nav li a:hover,
+.top-right-nav li a:active {
+    color: #FF6565; /* Highlight color */
+    background-color: rgba(255, 255, 255, 0.15); /* Subtle background on hover */
+}
+
+/* --- Hero Content (for index.html) --- */
+.hero-content {
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 120px 40px; /* Adjust padding for better look, especially considering header */
+    position: relative;
+    z-index: 1;
+    max-width: 900px; /* Set max-width for hero content specific text block */
+    margin: auto; /* Center content horizontally */
+}
+
+Yohan, [6/18/2025 9:44 PM]
+.hero-content h1 {
+    font-size: 3.5em; /* Larger heading for hero */
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin-bottom: 50px;
+    color: #f0f0f0;
+}
+
+/* Button on Hero */
+.button {
+    background-color: hsl(0, 89%, 55%); /* Red/Orange */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block; /* Ensure it respects margin/padding */
+}
+
+.button:hover {
+    background-color: #FF6565;
+    transform: translateY(-2px);
+}
+
+/* --- "Intro" Content Section (from your latest HTML, previously named '.content') --- */
+/* This section appears on index.html after the hero */
+.content {
+    background-color: none; /* White background for this section */
+    padding: 50px 0; /* Vertical padding, horizontal handled by .main-content-width */
+    color: #371c77;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.content p {
+    color: white;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+/* --- Styles for the Second Page (e.g., results.html or what-we-do.html) --- */
+
+/* Class to apply to the <body> or <main> tag of the second page */
+.white-bg-page {
+    background-color: white; /* The desired white background for the second page */
+    color: #333; /* Default text color for this white page */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+}
+
+/* Header for the second page (reusing icon1 and top-right-nav classes) */
+.header-for-white-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for header */
+    background-color: white; /* Ensure header itself is white */
+    position: sticky; /* Make header sticky at the top */
+    top: 0;
+    z-index: 100; /* Ensure it stays on top */
+}
+
+/* Adjusting icon and nav colors for the white page header */
+.header-for-white-page .icon1 {
+    color: #371c77; /* Darker color for icon on white background */
+}
+
+.header-for-white-page .top-right-nav li a {
+    color: #333; /* Darker link color for white background */
+}
+
+.header-for-white-page .top-right-nav li a:hover,
+.header-for-white-page .top-right-nav li a:active {
+    color: #FF6565;
+    background-color: rgba(0, 0, 0, 0.05); /* Subtle dark background on hover */
+}
+
+/* Main Content Wrapper for the 'What we do...' and features section */
+/* This .container class effectively becomes the main content area for the second page. */
+.container {
+    /* Apply the common content width class here */
+    /* Replaces: width: 80%; max-width: 1100px; padding: 30px 20px; */
+    padding-top: 50px; /* Specific top padding */
+    padding-bottom: 50px; /* Specific bottom padding */
+    text-align: center;
+    background-color: #ffffff; /* Explicitly white background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Lighter shadow for main content */
+    margin-top: 30px; /* Space from header */
+    margin-bottom: 30px; /* Space below */
+}
+
+.container h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 800px; /* Specific max-width for the description paragraph */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: 220px;
+    padding: 20px;
+    text-align: center;
+}
+
+.icon {
+    font-size: 3.5em;
+    color: #ff6347; /* A shade of red/coral for the icons */
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+Yohan, [6/18/2025 9:44 PM]
+.feature-item p {
+    font-size: 0.95em;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Pentagon stats (if you bring them back to a "results" page) */
+/* .stats-container-white-page, .stat-item-white-page, .pentagon-white-page etc. */
+/* ... (Add these styles if you have them in your results.html) ... */
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .hero-header {
+        padding: 10px 20px;
+    }
+    .top-right-nav ul {
+        gap: 15px;
+    }
+    /* .stats-container-white-page {
+        flex-direction: column;
+        align-items: center;
+    } */ /* Uncomment if using pentagon stats */
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature-item {
+        max-width: 300px;
+        width: 100%;
+    }
+    .main-content-width {
+        padding: 0 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .hero-content {
+        padding: 80px 20px;
+    }
+    .button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+    .hero-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .top-right-nav {
+        width: 100%;
+    }
+    .top-right-nav ul {
+        justify-content: space-around;
+        width: 100%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .description {
+        font-size: 1em;
+    }
+    .icon {
+        font-size: 3em;
+    }
+}
