@@ -1,0 +1,630 @@
+Yohan, [6/18/2025 9:53 PM]
+/* --- General Body and Base Styles --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /* Default background for the whole site. */
+    background-color: #f8f8f8; /* Light gray for general background */
+    color: #333; /* Default text color for general content */
+}
+
+/* Define a consistent maximum width for main content areas */
+.main-content-width {
+    max-width: 1100px; /* Adjust this value as needed for your design */
+    margin-left: auto; /* Center the content horizontally */
+    margin-right: auto; /* Center the content horizontally */
+    padding: 0 20px; /* Add horizontal padding to prevent content from touching edges */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* --- First Section: The Initial Hero (from index.html concept) --- */
+.hero {
+    background-image: url('headphones_hero_1.jpg');
+    background-color: #333; /* Fallback if image fails, darker */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh; /* Make hero take full viewport height */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within hero */
+    overflow: hidden;
+    color: white; /* Default text color for hero content */
+}
+
+/* Hero Overlay for readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    z-index: 0; /* Keep it behind text content */
+}
+
+/* --- Hero Header (for navigation and icon on index.html) --- */
+.hero-header {
+    position: absolute; /* Position relative to .hero */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    z-index: 1; /* Above overlay */
+}
+
+/* Icon (Headphones Logo) on Hero Header */
+.icon1 {
+    font-size: 1.2rem;
+    color: blue; /* Or a color visible on hero background */
+    padding: 5px 10px;
+    /* font-family: 'Spin-Cycle-OT', sans-serif; /* Make sure this font is imported or available */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+.icon1 img {
+    height: 30px;
+    width: auto;
+    vertical-align: middle; /* Aligns image nicely with text */
+}
+
+/* Top Right Navigation */
+.top-right-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.top-right-nav li a {
+    text-decoration: none;
+    color: white; /* Visible on dark hero background */
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.top-right-nav li a:hover,
+.top-right-nav li a:active {
+    color: #FF6565; /* Highlight color */
+    background-color: rgba(255, 255, 255, 0.15); /* Subtle background on hover */
+}
+
+/* --- Hero Content (for index.html) --- */
+.hero-content {
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 120px 40px;
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin-bottom: 50px;
+    color: #f0f0f0;
+}
+
+/* Button on Hero */
+.button {
+    background-color: hsl(0, 89%, 55%); /* Red/Orange */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #FF6565;
+    transform: translateY(-2px);
+}
+
+Yohan, [6/18/2025 9:53 PM]
+/* --- Second Section: "Brief Introduction" Content (.intro-section) --- */
+.intro-section { /* Using the new class name */
+    background-color: #1a1a2e; /* Dark background from original analysis */
+    padding: 50px 0; /* Vertical padding, horizontal handled by .main-content-width */
+    color: white; /* Text color for this dark section */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.intro-section p { /* Targeting paragraphs within this section */
+    color: white; /* Ensure text is visible on dark background */
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+
+/* --- Third Section: "What we do..." and Features (.what-we-do-section / .container) --- */
+.what-we-do-section { /* New class added to the container in HTML */
+    background-color: #ffffff; /* Explicitly white background */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 8px; /* Assuming some border-radius for the whole container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Lighter shadow for main content */
+    margin-top: 30px; /* Space from previous section */
+    margin-bottom: 30px; /* Space before next section */
+}
+
+/* .container h1 and .description and .features are already within .container */
+.what-we-do-section h1 { /* Targeting H1 within this section */
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: 220px;
+    padding: 20px;
+    text-align: center;
+}
+
+.icon {
+    font-size: 3.5em;
+    color: #ff6347; /* A shade of red/coral for the icons */
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 0.95em;
+    color: #777;
+    line-height: 1.5;
+}
+
+
+/* --- Fourth Section: "Our Results" Hero and Stats (.results-hero-section) --- */
+.results-hero-section { /* Using the new class name */
+    position: relative;
+    width: 100%;
+    min-height: 500px; /* Adjusted to min-height instead of fixed 100vh if it's not the primary hero */
+    background-image: url('image_4a37e4.jpg'); /* Using the uploaded image */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    color: #fff; /* Default text color for this section */
+    padding: 50px 20px; /* Add some padding around the content */
+    box-sizing: border-box;
+}
+
+.results-hero-section .overlay { /* Targeting overlay within this specific section */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.results-content { /* Using the new class name */
+    position: relative;
+    z-index: 2;
+    max-width: 900px; /* Keep content readable */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.results-content h1 { /* Targeting H1 within this specific content block */
+    font-size: 2.8em; /* Slightly smaller than main hero H1, but still prominent */
+    margin-bottom: 25px;
+    color: white; /* Ensure text is white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.results-content p { /* Targeting paragraphs within this specific content block */
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #f0f0f0; /* Slightly off-white for contrast */
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+Yohan, [6/18/2025 9:53 PM]
+.pentagon {
+    width: 120px;
+    height: 114px;
+    background-color: #e74c3c; /* Red color from the image */
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white; /* Ensure pentagon text is white */
+}
+
+.pentagon span {
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item p {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white; /* Ensure text below pentagon is white */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .hero-header {
+        padding: 10px 20px;
+    }
+    .top-right-nav ul {
+        gap: 15px;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature-item {
+        max-width: 300px;
+        width: 100%;
+    }
+    .main-content-width {
+        padding: 0 15px;
+    }
+    .results-hero-section h1 {
+        font-size: 2em;
+    }
+    .results-hero-section p {
+        font-size: 1em;
+    }
+    .stats-container {
+        gap: 20px;
+    }
+    .pentagon {
+        width: 100px;
+        height: 95px;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .hero-content {
+        padding: 80px 20px;
+    }
+    .button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+    .hero-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .top-right-nav {
+        width: 100%;
+    }
+    .top-right-nav ul {
+        justify-content: space-around;
+        width: 100%;
+    }
+    .what-we-do-section h1 { /* Changed from generic h1 */
+        font-size: 2em;
+    }
+    .description {
+        font-size: 1em;
+    }
+    .icon {
+        font-size: 3em;
+    }
+    .results-content { /* Changed from generic content */
+        padding: 10px;
+    }
+    .results-content h1 { /* Changed from generic h1 */
+        font-size: 1.8em;
+    }
+    .pentagon {
+        width: 80px;
+        height: 76px;
+        font-size: 1.2em;
+    }
+}
+
+/* --- Contact Section Styles --- */
+.contact-section {
+    /* The .main-content-width class should handle max-width, margin, and horizontal padding */
+    background-color: #ffffff; /* White background as per the image */
+    padding: 50px 20px; /* Adjust vertical padding */
+    text-align: center; /* Center the h1 and form */
+    color: #333; /* Default text color for this section */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow around the form area */
+    border-radius: 8px; /* Slightly rounded corners for the section */
+    margin-top: 50px; /* Space from the section above it */
+    margin-bottom: 50px; /* Space to the section below it */
+}
+
+.contact-section h1 {
+    font-size: 2.2em; /* Size for the "Contact us" heading */
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center; /* Explicitly center the heading */
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 500px; /* Limit the form width to match the image's appearance */
+    margin: 0 auto; /* Center the form itself within the contact-section */
+    text-align: left; /* Align form elements to the left within the form */
+}
+
+.form-group {
+    margin-bottom: 25px; /* Space between each form field group */
+}
+
+.form-group label {
+    display: block; /* Make labels appear on their own line */
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 8px; /* Space between the label and its input/textarea */
+    font-weight: bold; /* Labels often look better slightly bold */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+
+Yohan, [6/18/2025 9:53 PM]
+.form-group textarea {
+    width: 100%; /* Make inputs and textarea take full width of their parent (.form-group) */
+    padding: 10px 0; /* Vertical padding, no horizontal padding to emphasize the underline */
+    border: none; /* Remove default browser border */
+    border-bottom: 1px solid #ccc; /* Light gray underline */
+    font-size: 1em;
+    color: #333;
+    background-color: transparent; /* Ensure input background is transparent */
+    outline: none; /* Remove focus outline */
+    transition: border-bottom-color 0.3s ease; /* Smooth transition for focus effect */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-bottom-color: #FF6565; /* Highlight underline on focus (red from previous themes) */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 80px; /* Minimum height for the message area */
+}
+
+/* Button style (reusing your existing .button class if it's already defined elsewhere) */
+/* If .button is defined with global styles, ensure these specific overrides take precedence */
+.contact-section .button { /* Specificity: target button within contact-section */
+    background-color: #FF6565; /* Red color from the image */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase; /* "CALL TO ACTION" is uppercase */
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block; /* Make button take its own line */
+    margin: 30px auto 0; /* Center the button and add space above */
+    width: auto; /* Allow button to size based on its content */
+    min-width: 180px; /* Ensure a decent minimum width */
+}
+
+.contact-section .button:hover {
+    background-color: #e74c3c; /* Slightly darker red on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+
+/* --- Responsive Adjustments for Contact Form --- */
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 30px 15px; /* Adjust padding for smaller screens */
+    }
+    .contact-form {
+        max-width: 100%; /* Allow form to take full width on very small screens */
+    }
+    .contact-section h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .contact-section .button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+/* --- Footer Styles --- */
+.site-footer {
+    background-color: #1A1A2E; /* Dark blue background from the image */
+    color: white; /* White text for the footer */
+    padding: 40px 0 20px; /* Top, horizontal, and bottom padding */
+    text-align: center; /* Center content by default */
+    font-family: Arial, sans-serif;
+    position: relative; /* Needed for any absolute positioning inside */
+}
+
+.site-footer .main-content-width {
+    /* This class is applied to the inner div to control max-width and centering */
+    display: flex;
+    justify-content: space-between; /* Pushes logo to left, social icons to right */
+    align-items: center; /* Vertically aligns items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-bottom: 20px; /* Space between top content and copyright */
+    padding: 0 30px; /* Adjust padding inside the main-content-width container */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white; /* Ensure text is white */
+}
+
+.footer-logo .logo-icon {
+    height: 35px; /* Size of the logo image */
+    width: auto;
+    vertical-align: middle; /* Align icon with text */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px; /* Space between social media icons */
+}
+
+Yohan, [6/18/2025 9:53 PM]
+.social-icons a {
+    color: white; /* White icons */
+    font-size: 1.5rem; /* Size of the icons */
+    width: 40px; /* Make icons circular */
+    height: 40px;
+    border-radius: 50%; /* Make icons circular */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background for icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    background-color: #FF6565; /* Red color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator line */
+    padding-top: 20px;
+    margin-top: 20px; /* Space above the line */
+    text-align: center; /* Center the copyright text */
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7); /* Slightly faded white for copyright */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .site-footer .main-content-width {
+        flex-direction: column; /* Stack logo and social icons vertically */
+        gap: 20px; /* Space between stacked items */
+        padding: 0 20px; /* Adjust padding */
+    }
+
+    .footer-logo,
+    .social-icons {
+        justify-content: center; /* Center items when stacked */
+        width: 100%; /* Take full width */
+    }
+
+    .footer-logo {
+        margin-bottom: 0px; /* Reduce space if logo is above social icons */
+    }
+}
+
+@media (max-width: 480px) {
+    .site-footer {
+        padding: 30px 0 15px;
+    }
+    .footer-logo {
+        font-size: 1rem;
+    }
+    .footer-logo .logo-icon {
+        height: 28px;
+    }
+    .social-icons a {
+        font-size: 1.2rem;
+        width: 35px;
+        height: 35px;
+    }
+    .footer-bottom {
+        font-size: 0.8em;
+    }
+}
