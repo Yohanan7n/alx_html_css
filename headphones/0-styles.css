@@ -1,4 +1,4 @@
-Yohan, [6/18/2025 9:44 PM]
+
 /* --- General Body and Base Styles --- */
 body {
     margin: 0;
@@ -119,8 +119,6 @@ body {
     max-width: 900px; /* Set max-width for hero content specific text block */
     margin: auto; /* Center content horizontally */
 }
-
-Yohan, [6/18/2025 9:44 PM]
 .hero-content h1 {
     font-size: 3.5em; /* Larger heading for hero */
     margin-bottom: 25px;
@@ -267,7 +265,6 @@ Yohan, [6/18/2025 9:44 PM]
     margin-bottom: 10px;
 }
 
-Yohan, [6/18/2025 9:44 PM]
 .feature-item p {
     font-size: 0.95em;
     color: #777;
