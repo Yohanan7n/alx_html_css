@@ -1,4 +1,4 @@
-Yohan, [6/18/2025 9:49 PM]
+
 /* --- General Body and Base Styles --- */
 body {
     margin: 0;
@@ -150,7 +150,7 @@ body {
     transform: translateY(-2px);
 }
 
-Yohan, [6/18/2025 9:49 PM]
+
 /* --- Second Section: "Brief Introduction" Content (.intro-section) --- */
 .intro-section { /* Using the new class name */
     background-color: #1a1a2e; /* Dark background from original analysis */
@@ -296,7 +296,7 @@ Yohan, [6/18/2025 9:49 PM]
     text-align: center;
 }
 
-Yohan, [6/18/2025 9:49 PM]
+
 .pentagon {
     width: 120px;
     height: 114px;
@@ -561,8 +561,6 @@ Yohan, [6/18/2025 9:49 PM]
     display: flex;
     gap: 15px; /* Space between social media icons */
 }
-
-Yohan, [6/18/2025 9:49 PM]
 .social-icons a {
     color: white; /* White icons */
     font-size: 1.5rem; /* Size of the icons */
